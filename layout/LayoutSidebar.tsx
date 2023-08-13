@@ -13,9 +13,9 @@ const LayoutPrincipal: FC<Props> = ({
     return (
         <div className="flex flex-col h-screen">
             <Navbar />
-            <div className="flex flex-row h-full">
+            <div className="flex flex-row h-full w-screen">
                 <Sidebar />
-                <main className="flex flex-row h-full">
+                <main className="ml-0 sm:ml-64 w-full p-4 sm:px-10">
                     {children}
                 </main>
             </div>

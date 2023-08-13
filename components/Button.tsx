@@ -12,7 +12,7 @@ const Button : FC<Props> =({
     color
 }) => {
     return(
-        <button onClick={action} className = {"flex p-2 rounded-lg w-fit mx-auto " + color }>
+        <button onClick={action} className = {"p-2 rounded-lg transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105  duration-300 " + color }>
             {children}
         </button>
     )
