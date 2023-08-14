@@ -11,14 +11,17 @@ const LayoutPrincipal: FC<Props> = ({
 }) => {
 
     return (
-        <div className="flex flex-col h-screen">
+        <div className="flex flex-col h-screen w-screen">
             <Navbar />
-            <div className="flex flex-row h-full w-screen">
-                <Sidebar />
-                <main className="ml-0 sm:ml-64 w-full p-4 sm:px-10">
+            <div className="flex flex-row">
+                <div className=" max-w-[256px]">
+                    <Sidebar/>
+                </div>
+                <div className="sm:ml-64 w-full p-4">
                     {children}
-                </main>
+                </div>
             </div>
+
 
         </div>
     )
