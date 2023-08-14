@@ -4,15 +4,17 @@ interface Props {
     children : ReactNode
     action ?: () => void
     color : string
+    animation ?: string
 }
 
 const Button : FC<Props> =({
     children,
     action,
-    color
+    color,
+    animation
 }) => {
     return(
-        <button onClick={action} className = {"p-2 rounded-lg transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105  duration-300 " + color }>
+        <button onClick={action} className = {`p-2 rounded-lg transition ease-in-out delay-150 duration-300 ${color} ${animation}`}>
             {children}
         </button>
     )
